@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+:root {
+  font-family: "HGP教科書体", "Gothic";
+}
+
+.sheet {
+  page-break-after: always;
+}
+
+header > * {
+  display: inline;
+}
+
+.profile > * {
+  display: inline;
+}
+
+.contact > * {
+  display: inline-block;
+}
+
+/* history */
+
+.history {
+  border: solid black 2px;
+}
+
+.history .subheader td:nth-child(3) {
+  text-align: center;
+}
