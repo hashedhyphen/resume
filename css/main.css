@@ -1,31 +1,288 @@
 @charset "UTF-8";
 
+/*** general ***/
+
 :root {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-family: "HGP教科書体", "Gothic";
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  width: 175mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .sheet {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
   page-break-after: always;
 }
 
-header > * {
-  display: inline;
+/*** header ***/
+
+.header {
+  width: 100mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.profile > * {
-  display: inline;
+.header > .title {
+  margin: 0;
 }
 
-.contact > * {
-  display: inline-block;
+.header > .date {
+  height: 1rem;
 }
 
-/* history */
+/*** core profile ***/
 
-.history {
+.coreprof {
+  height: 27mm;
+  width: 155mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.coreprof > .name {
+  height: 18mm;
+  width: 100mm;
+  border-top:   2px solid black;
+  border-left:  2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.coreprof > .name > .ruby {
+  height: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.coreprof > .name > .formal {
+  height: calc(18mm - 1rem);
+}
+
+.coreprof > .misc {
+  height: 9mm;
+  width: 100mm;
+  border-top:   2px solid black;
+  border-left:  2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.coreprof > .misc > .age {
+  width: 80mm;
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coreprof > .misc > .sex {
+  width: 20mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** contact ***/
+
+.contact {
+  height: 18mm;
+  width: 175mm;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.contact > .address {
+  width: 140mm;
+  border-right: 2px solid black;
+}
+
+.contact > .address > .ruby {
+  border-bottom: 1px solid black;
+}
+
+.contact > .phone {
+  width: 35mm;
+}
+
+.contact:nth-child(2) {
+  border-bottom: 2px solid black;
+}
+
+/*** personality ***/
+
+.personality {
+  height: 60mm;
+  width: 175mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.personality > .motive {
+  width: 110mm;
+  border: 2px solid black;
+}
+
+.personality > .condition {
+  width: 65mm;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.personality > .condition > .commute {
+  height: 20mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.personality > .condition > .commute > div {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.personality > .condition > .commute > div:nth-child(1) {
+  height: 1rem;
+}
+
+.personality > .condition > .commute > div:nth-child(2) {
+  height: calc(20mm - 1rem);
+  font-size: 1.1rem;
+}
+
+.personality > .condition > .family {
+  height: 20mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.personality > .condition > .family > div {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.personality > .condition > .family > div:nth-child(1) {
+  height: 1rem;
+}
+
+.personality > .condition > .family > div:nth-child(2) {
+  height: calc(20mm - 1rem);
+  font-size: 1.1rem;
+}
+
+.personality > .condition > .spouse {
+  height: 20mm;
+  width: 65mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.personality > .condition > .spouse > .existence {
+  height: inherit;
+  width: 20mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.personality > .condition > .spouse > .existence > div:nth-child(1) {
+  height: 1rem;
+}
+
+.personality > .condition > .spouse > .existence > div:nth-child(2) {
+  height: calc(20mm - 1rem);
+  font-size: 1.1rem;
+}
+
+.personality > .condition > .spouse > .duty {
+  height: inherit;
+  width: 45mm;
+  display: flex;
+  flex-direction: column;
+  justyfy-content: flex-start;;
+  align-items: center;
+}
+
+.personality > .condition > .spouse > .duty > div:nth-child(1) {
+  height: 1rem;
+}
+
+.personality > .condition > .spouse > .duty > div:nth-child(2) {
+  height: calc(20mm - 1rem);
+  font-size: 1.1rem;
+}
+
+/*** request ***/
+
+.request {
+  height: 60mm;
+  width: 175mm;
+  border: 2px solid black;
+}
+
+/*** history & license ***/
+
+table {
   border: solid black 2px;
+  border-collapse: collapse;
 }
 
-.history .subheader td:nth-child(3) {
+thead tr {
+  height: 7mm;
+  border-bottom: solid black 2px;
+}
+
+tbody tr {
+  height: 9mm;
+  border-bottom: solid black 1px;
+}
+
+table .year {
+  width: 20mm;
+  border-right: solid black 1px;
+}
+
+table .month {
+  width: 10mm;
+  border-right: solid black 2px;
+}
+
+table .content {
+  width: 145mm;
+}
+
+td {
   text-align: center;
 }
