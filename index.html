@@ -1,201 +1,146 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
- <meta charset="utf-8">
- <title>My Resume</title>
- <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
- <div class="sheet">
-  <div class="header">
-   <h1 class="title">履歴書</h1>
-   <div class="date">
-    <time datetime="">年 月 日現在</time>
-   </div>
-  </div><!-- .header -->
+  <main>
+    <header>
+      <h1 class="title">履歴書</h1>
+      <div class="date"><time datetime="">平成 年 月 日現在</time></div>
+    </header>
 
-  <div class="coreprof">
-   <div class="name">
-    <div class="ruby">
-     <span>ふりがな</span>
-    </div>
-    <div class="formal">
-     <span>氏名</span>
-    </div>
-   </div><!-- .name -->
+    <div class="coreprof">
+      <div class="narrow"><span>ふりがな</span></div>
+      <div class="narrow"><span>氏名</span></div>
+      <div class="wide"><span></span></div>
 
-   <div class="misc">
-    <div class="age">
-     <span>年 月 日生（満 歳）</span>
-    </div>
-    <div class="sex">
-      <span>男・女</span>
-    </div>
-   </div><!-- .misc -->
-  </div><!-- .coreprof -->
+      <div class="detail">
+        <span class="age">平成 年 月 日生 （満 歳）</span>
+        <span class="sex">男・女</span>
+      </div>
+    </div><!-- .coreprof -->
 
-  <section class="contacts">
-   <div class="contact">
-    <div class="address">
-     <div class="ruby">
-      <span>ふりがな</span>
-     </div>
-     <div class="postal">
-       <span class="caption">現住所</span>
-       <span class="code">〒</span>
-     </div>
-     <div class="maintext">
-     </div>
-    </div><!-- .address -->
-    <div class="phone">
-     <span>電話</span>
-    </div>
-   </div><!-- .contact -->
-  </section><!-- .contacts -->
+    <div class="contact">
+      <div class="address">
+        <div class="narrow">
+          <span class="caption">ふりがな</span>
+          <span class="text"></span>
+        </div>
+        <div class="narrow">
+          <span>現住所</span>
+          <span>〒</span>
+        </div>
+        <div class="wide"><span></span></div>
+      </div>
 
-  <table class="history">
-   <col class="year">
-   <col class="month">
-   <col class="content">
-   <thead>
-    <tr>
-     <th>年
-     <th>月
-     <th>学歴・職歴（各別にまとめて書く）
-   <tbody>
-    <tr class="subheader">
-     <td>
-     <td>
-     <td>学歴
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr class="subheader">
-     <td>
-     <td>
-     <td>職歴
-    <tr>
-     <td>
-     <td>
-     <td>なし
-    <tr class="endsymbol">
-     <td>
-     <td>
-     <td>以上
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-  </table>
- </div><!-- .sheet -->
+      <div class="phone">
+        <div class="narrow"><span>電話</span></div>
+        <div class="number"><span></span></div>
+      </div>
+    </div><!-- .contact -->
 
- <div class="sheet">
-  <table class="license">
-   <col class="year">
-   <col class="month">
-   <col class="content">
-   <thead>
-    <tr>
-     <th>年
-     <th>月
-     <th>資格・免許
-   <tbody>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-    <tr>
-     <td>
-     <td>
-     <td>
-  </table>
+    <table class="records">
+      <col class="year">
+      <col class="month">
+      <col class="content">
+      <thead>
+        <tr>
+        <th>年
+        <th>月
+        <th>学歴・職歴
+      <tbody>
+        <tr class="subheader">
+          <td>
+          <td>
+          <td>学歴
+        <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td>
+          <td>
+          <td>
+         <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td><td><td>
+        <tr class="subheader">
+          <td>
+          <td>
+          <td>職歴
+        <tr class="subheader">
+          <td>
+          <td>
+          <td>なし
+        <tr class="endsymbol">
+          <td>
+          <td>
+          <td>以上
+    </table><!-- .records -->
 
-  <div class="personality">
-   <div class="motive">
-    <span>志望の動機、特技、好きな学科、アピールポイントなど</span>
-   </div>
-   <div class="condition">
-    <div class="commute">
-     <div><span>通勤時間</span></div>
-     <div><span>約 時間 分</span></div>
-    </div>
-    <div class="family">
-     <div><span>扶養家族数（配偶者を除く）</span></div>
-     <div><span>人</span></div>
-    </div>
-    <div class="spouse">
-     <div class="existence">
-      <div><span>配偶者</span></div>
-      <div><span>有・無</span></div>
-     </div>
-     <div class="duty">
-      <div><span>配偶者の扶養義務</span></div>
-      <div><span>有・無</span></div>
-     </div>
-    </div>
-   </div>
-  </div>
+    <table class="records">
+      <col class="year">
+      <col class="month">
+      <col class="content">
+      <thead>
+        <tr>
+          <th>年
+          <th>月
+          <th>資格・免許
+      <tbody>
+        <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td>
+          <td>
+          <td>
+        <tr>
+          <td>
+          <td>
+          <td>
+    </table><!-- .records -->
 
-  <div class="request">
-   <span>本人希望記入欄（特に給料・職種・勤務時間・勤務地・その他についての希望があれば記入）</span>
-  </div>
- </div><!-- .sheet -->
+    <div class="motive">
+      <div class="narrow">
+        <span>志望の動機、特技、好きな学科、アピールポイントなど</span>
+      </div>
+      <div class="list">
+        <span>志望動機</span>
+        <ul>
+          <li>
+          <li>
+          <li>
+          <li>
+        </ul>
+      </div><!-- .list -->
+      <div class="list">
+        <span>これまでの活動</span>
+        <ul>
+          <li>
+          <li>
+          <li>
+          <li>
+          <li>
+          <li>
+        </ul>
+      </div><!-- .list -->
+    </div><!-- .motive -->
+  </main>
 </body>
 </html>

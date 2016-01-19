@@ -1,288 +1,225 @@
 @charset "UTF-8";
 
-/*** general ***/
+/*** base ***/
+
+* {
+  box-sizing: border-box;
+}
 
 :root {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-family: "HGP教科書体", "Gothic";
-  font-size: 17px;
+  font-family: "HGP教科書体";
+  font-size: 18px;
 }
 
 body {
-  margin: 0;
-  width: 175mm;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-.sheet {
+main {
+  width: 650px;
+}
+
+/*** template ***/
+
+.narrow {
+  height: 1.2rem;
+  padding-left:  5px;
+  padding-right: 5px;
+  position: relative;
+}
+
+.wide {
+  height: 2.0rem;
+  position: relative;
+  font-size: 1.3rem;
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  page-break-after: always;
+  justify-content: center;
+  align-items: center;
 }
 
 /*** header ***/
 
-.header {
-  width: 100mm;
-  display: flex;
-  flex-direction: row;
+header {
+  margin-bottom: 0.5rem;
+  height: 2.0rem;
+  width: 380px;
+  position: relative;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.header > .title {
+header > .title {
   margin: 0;
+  font-size: 2rem;
 }
 
-.header > .date {
+header > .date {
   height: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /*** core profile ***/
 
 .coreprof {
-  height: 27mm;
-  width: 155mm;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.coreprof > .name {
-  height: 18mm;
-  width: 100mm;
+  width: 380px;
   border-top:   2px solid black;
   border-left:  2px solid black;
   border-right: 2px solid black;
-  display: flex;
-  flex-direction: column;
 }
 
-.coreprof > .name > .ruby {
-  height: 1rem;
+.coreprof > .narrow:first-child {
   border-bottom: 1px solid black;
 }
 
-.coreprof > .name > .formal {
-  height: calc(18mm - 1rem);
+.coreprof > .wide {
+  border-bottom: 2px solid black;
 }
 
-.coreprof > .misc {
-  height: 9mm;
-  width: 100mm;
-  border-top:   2px solid black;
-  border-left:  2px solid black;
+.coreprof > .detail {
+  height: 1.5rem;
+  position: relative;
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.coreprof > .detail > span {
+  height: inherit;
+  text-align: center;
+}
+
+.coreprof > .detail > span:first-child {
   border-right: 2px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-grow: 7;
 }
 
-.coreprof > .misc > .age {
-  width: 80mm;
-  border-right: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.coreprof > .misc > .sex {
-  width: 20mm;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.coreprof > .detail > span:last-child {
+  flex-grow: 3;
 }
 
 /*** contact ***/
 
 .contact {
-  height: 18mm;
-  width: 175mm;
+  width: inherit;
   border: 2px solid black;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 
 .contact > .address {
-  width: 140mm;
   border-right: 2px solid black;
+  flex-grow: 7;
 }
 
-.contact > .address > .ruby {
+.contact > .address > .narrow:first-child {
   border-bottom: 1px solid black;
+  display: flex;
+}
+
+.contact > .address > .narrow:first-child > span:first-child {
+  width: 4rem;
+}
+
+.contact > .address > .narrow:first-child > span:last-child {
+  width: 20rem;
+  text-align: center;
 }
 
 .contact > .phone {
-  width: 35mm;
+  flex-grow: 3;
 }
 
-.contact:nth-child(2) {
-  border-bottom: 2px solid black;
-}
-
-/*** personality ***/
-
-.personality {
-  height: 60mm;
-  width: 175mm;
+.contact > .phone > .number {
+  height: 3.2rem;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.personality > .motive {
-  width: 110mm;
-  border: 2px solid black;
-}
-
-.personality > .condition {
-  width: 65mm;
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.personality > .condition > .commute {
-  height: 20mm;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.personality > .condition > .commute > div {
-  width: inherit;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
 }
 
-.personality > .condition > .commute > div:nth-child(1) {
-  height: 1rem;
-}
+/*** records ***/
 
-.personality > .condition > .commute > div:nth-child(2) {
-  height: calc(20mm - 1rem);
-  font-size: 1.1rem;
-}
-
-.personality > .condition > .family {
-  height: 20mm;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.personality > .condition > .family > div {
-  width: inherit;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.personality > .condition > .family > div:nth-child(1) {
-  height: 1rem;
-}
-
-.personality > .condition > .family > div:nth-child(2) {
-  height: calc(20mm - 1rem);
-  font-size: 1.1rem;
-}
-
-.personality > .condition > .spouse {
-  height: 20mm;
-  width: 65mm;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.personality > .condition > .spouse > .existence {
-  height: inherit;
-  width: 20mm;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.personality > .condition > .spouse > .existence > div:nth-child(1) {
-  height: 1rem;
-}
-
-.personality > .condition > .spouse > .existence > div:nth-child(2) {
-  height: calc(20mm - 1rem);
-  font-size: 1.1rem;
-}
-
-.personality > .condition > .spouse > .duty {
-  height: inherit;
-  width: 45mm;
-  display: flex;
-  flex-direction: column;
-  justyfy-content: flex-start;;
-  align-items: center;
-}
-
-.personality > .condition > .spouse > .duty > div:nth-child(1) {
-  height: 1rem;
-}
-
-.personality > .condition > .spouse > .duty > div:nth-child(2) {
-  height: calc(20mm - 1rem);
-  font-size: 1.1rem;
-}
-
-/*** request ***/
-
-.request {
-  height: 60mm;
-  width: 175mm;
-  border: 2px solid black;
-}
-
-/*** history & license ***/
-
-table {
+table.records {
+  margin-top: 10px;
   border: solid black 2px;
   border-collapse: collapse;
 }
 
-thead tr {
-  height: 7mm;
-  border-bottom: solid black 2px;
+.records col.year {
+  width: 80px;
+  border-right: 1px solid black;
 }
 
-tbody tr {
-  height: 9mm;
-  border-bottom: solid black 1px;
+.records col.month {
+  width: 50px;
+  border-right: 2px solid black;
 }
 
-table .year {
-  width: 20mm;
-  border-right: solid black 1px;
+.records col.content {
+  width: 520px;
 }
 
-table .month {
-  width: 10mm;
-  border-right: solid black 2px;
-}
-
-table .content {
-  width: 145mm;
-}
-
-td {
+.records td:nth-child(1) {  /* col.year */
   text-align: center;
+}
+
+.records td:nth-child(2) {  /* col.month */
+  text-align: center;
+}
+
+.records td:nth-child(3) {  /* col.content */
+  padding-left:  1rem;
+  padding-right: 1rem;
+  text-align: left;
+}
+
+.records tr {
+  height: 1.5rem;
+}
+
+.records thead > tr {
+  border-bottom: 2px solid black;
+}
+
+.records thead > tr > th {
+  font-weight: normal;
+}
+
+.records tbody tr {
+  border-bottom: 1px solid black;
+}
+
+.records tbody tr.subheader td:nth-child(3) {
+  text-align: center;
+}
+
+.records tbody tr.endsymbol td:nth-child(3) {
+  position: relative;
+  left: 400px;
+}
+
+/*** motive ***/
+
+.motive {
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+.motive > .list {
+  margin: 10px 0 10px 0;
+  padding: 0 20px 0 20px;
+  position: relative;
+  font-family: "Times New Roman", "HGP教科書体";
+}
+
+.motive > .list > span {
+  font-weight: bold;
+}
+
+.motive > .list > ul {
+  margin: 5px 0 5px 0;
+  padding: 0;
+  list-style-position: inside;
 }
