@@ -2,6 +2,10 @@
 
 /*** base ***/
 
+@page {
+  margin: 5mm 0 0 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,6 +23,7 @@ body {
 
 main {
   width: 650px;
+  position: relative;
 }
 
 /*** template ***/
@@ -37,6 +42,33 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*** photo ***/
+
+.photo {
+  height: 120px;
+  width: 100px;
+  padding: 10px 5px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  border: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.55rem;
+}
+
+.photo-details > ol {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.photo-details .splitted > div {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*** header ***/
